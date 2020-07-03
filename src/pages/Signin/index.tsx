@@ -10,7 +10,7 @@ import Input from '../../components/Input';
 import logo from '../../assets/logo.svg';
 import * as S from './styles';
 import getValidationErrors from '../../utils/getValidationsErros';
-import { useAuth } from '../../context/auth-context';
+import { useAuth } from '../../hooks/auth-context';
 
 interface SigninFormData {
   email: string;
@@ -19,8 +19,7 @@ interface SigninFormData {
 
 const Signin: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
-  const { signIn, user } = useAuth();
-  console.log(user);
+  const { signIn } = useAuth();
 
   const handleSubmit = useCallback(
     async (data: SigninFormData) => {
@@ -40,8 +39,10 @@ const Signin: React.FC = () => {
           password: data.password,
         });
       } catch (err) {
-        const errors = getValidationErrors(err);
-        formRef.current?.setErrors(errors);
+        if (err instanceof Yup.ValidationError) {
+          const errors = getValidationErrors(err);
+          formRef.current?.setErrors(errors);
+        }
       }
     },
     [signIn],
