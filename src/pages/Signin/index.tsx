@@ -9,6 +9,7 @@ import Input from '../../components/Input';
 
 import logo from '../../assets/logo.svg';
 import * as S from './styles';
+
 import getValidationErrors from '../../utils/getValidationsErros';
 
 const Signin: React.FC = () => {
