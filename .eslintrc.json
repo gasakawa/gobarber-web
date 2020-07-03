@@ -32,7 +32,6 @@
     "import/prefer-default-export": "off",
     "react/jsx-one-expression-per-line": "off",
     "camelcase": "off",
-    "no-console": "off",
     "no-unused-expressions": "off",
     "prettier/prettier": "error",
     "@typescript-eslint:/camelcase": "off",
