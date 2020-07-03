@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { shade } from 'polished';
 
-import backgroundImage from '../../assets/sign-in-background.png';
+import backgroundImage from '../../assets/sign-up-background.png';
 
 export const Container = styled.div`
   height: 100vh;
@@ -40,7 +40,7 @@ export const Content = styled.div`
   }
 
   > a {
-    color: #ff9000;
+    color: #f4ede8;
     display: flex;
     align-items: center;
     margin-top: 24px;
