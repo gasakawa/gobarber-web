@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { FiPower } from 'react-icons/fi';
+import { FiClock, FiPower } from 'react-icons/fi';
 import * as S from './styles';
 import logoImg from '../../assets/logo.svg';
 import { useAuth } from '../../hooks/auth';
@@ -27,6 +27,29 @@ const Dashboard: React.FC = () => {
           </button>
         </S.HeaderContent>
       </S.Header>
+      <S.Content>
+        <S.Schedule>
+          <h1>Horários agendados</h1>
+          <p>
+            <span>Hoje</span>
+            <span>Dia 06</span>
+            <span>Segunda-feira</span>
+          </p>
+
+          <S.NextAppointment>
+            <strong>Atendimento a seguir</strong>
+            <div>
+              <img src={user.avatar_url} alt={user.name} />
+              <strong>Diego Fernandes</strong>
+              <span>
+                <FiClock />
+                05:00
+              </span>
+            </div>
+          </S.NextAppointment>
+        </S.Schedule>
+        <S.Calendar />
+      </S.Content>
     </S.Container>
   );
 };
