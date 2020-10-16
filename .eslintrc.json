@@ -34,6 +34,7 @@
     "camelcase": "off",
     "@typescript-eslint/ban-types": "off",
     "no-unused-expressions": "off",
+    "import/no-duplicates": "off",
     "prettier/prettier": "error",
     "@typescript-eslint:/camelcase": "off",
     "react/jsx-props-no-spreading": "off",
